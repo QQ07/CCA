@@ -2,6 +2,7 @@ const express = require("express");
 const fs = require("fs");
 const path = require("path");
 const bodyParser = require("body-parser");
+app.use(bodyParser.json());
 
 const app = express();
 const PORT = 3000;
@@ -16,7 +17,6 @@ app.get("/", (req, res) => {
       console.error("Error reading HTML file:", err);
       res.status(500).send("Internal Server Error");
     } else {
-      // Set the content type to HTML
       res.status(200).send(data);
     }
   });
@@ -24,7 +24,6 @@ app.get("/", (req, res) => {
 
 
 
-// Simulated employee data store
 const employeeData = {
   101: {
     baseSalary: 50000,
@@ -34,8 +33,6 @@ const employeeData = {
   },
 };
 
-// Middleware to parse JSON requests
-app.use(bodyParser.json());
 
 // Endpoint to get employee salary by ID
 app.get("/getSalary/:employeeId", (req, res) => {
