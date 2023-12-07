@@ -31,8 +31,23 @@ const employeeData = {
   102: {
     baseSalary: 60000,
   },
-  "103":{
+  103: {
     baseSalary: 5000,
+  },
+  104: {
+    baseSalary: 10000,
+  },
+  105: {
+    baseSalary: 50000,
+  },
+  106: {
+    baseSalary: 60000,
+  },
+  107: {
+    baseSalary: 40000,
+  },
+  108: {
+    baseSalary: 10000,
   },
 };
 
