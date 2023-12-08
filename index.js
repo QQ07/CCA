@@ -7,9 +7,7 @@ const app = express();
 app.use(bodyParser.json());
 const PORT = 3000;
 
-// Root route
 app.get("/", (req, res) => {
-  // Read the content of the HTML file
   const filePath = path.join(__dirname, "index.html");
 
   fs.readFile(filePath, "utf8", (err, data) => {
@@ -21,7 +19,6 @@ app.get("/", (req, res) => {
     }
   });
 });
-
 
 
 const employeeData = {
