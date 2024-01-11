@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
 
 const employeeData = {
   101: {
-    baseSalary: 50000,
+    baseSalary: 60000,
   },
   102: {
     baseSalary: 60000,
